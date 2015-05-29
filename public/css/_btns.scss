@@ -1,0 +1,288 @@
+.btn {
+  width: 150px;
+  height: 50px;
+  background: $bgColor;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+  text-align: center;
+  &:hover {
+    p {
+      color: $white;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0; 
+  }
+  p {
+    font: {
+      family: 'Lato', sans-serif;
+      weight: 800;
+      size: 24px;
+    }
+    color: $purp;
+    line-height: 48px;
+    letter-spacing: 0;
+    margin: 0;
+    width: 100%;
+  }
+  line {
+    stroke-width: 4;
+    stroke: $purp;
+  }
+}
+
+@mixin btn-svg1 {
+  .btn1 {
+    @extend .btn;
+    @include transition(background 0.2s ease-in);
+    &:hover {
+      background: $purp;
+      @include transition-delay(0.2s);
+      svg line.top {
+        @include translateX(-300px);
+      }
+      svg line.bottom {
+        @include translateX(300px);
+      }
+      svg line.left {
+        @include translateY(100px);
+      }
+      svg line.right {
+        @include translateY(-100px);
+      }
+    }
+
+    p {
+      @include transition(color 0.5s ease-in-out);
+    }
+
+    svg {
+      line {
+        @include transition(all .4s ease-in-out);
+      }
+      line.top, line.bottom {
+        stroke-dasharray: 150;
+      }
+      line.left, line.right {
+        stroke-dasharray: 50;
+      }
+    }
+  }
+}
+
+@mixin btn-svg2 {
+  .btn2 {
+    @extend .btn;
+    box-shadow: inset 0 0 0 0 $purp;
+    @include transition(box-shadow 0.1s linear);
+
+    &:hover {
+      box-shadow: inset 0 50px 0 0 $purp;
+      @include transition-delay(0.25s);
+      svg line.top {
+        @include translateX(-150px);
+      }
+      svg line.bottom {
+        @include translateX(150px);
+      }
+      svg line.left {
+        @include translateY(50px);
+      }
+      svg line.right {
+        @include translateY(-50px);
+      }
+    }
+
+    p {
+      @include transition(all .2s ease-in-out);
+    }
+
+    svg {
+      line {
+        @include transition(all .3s ease-in-out);
+      }
+      line.top, line.bottom {
+        stroke-dasharray: 150;
+      }
+      line.left, line.right {
+        stroke-dasharray: 50;
+      }
+    }
+  }
+}
+
+@mixin btn-svg3 {
+  .btn3 {
+    @extend .btn;
+
+    &:hover {
+      @include transition-delay(0s);
+      svg line.top {
+        @include translateX(-300px);
+      }
+      svg line.bottom {
+        @include translateX(300px);
+      }
+      svg line.left {
+        @include translateY(50px);
+      }
+      svg line.right {
+        @include translateY(-50px);
+      }
+    }
+
+    p {
+      @include transition(all .3s ease-in-out);
+    }
+
+    svg {
+      line {
+        @include transition(all .3s ease-in-out);
+      }
+      line.top, line.bottom {
+        stroke-dasharray: 150;
+      }
+      line.left, line.right {
+        stroke-dasharray: 50;
+      }
+    }
+  }
+}
+
+@mixin btn-svg4 {
+  .btn4 {
+    @extend .btn;
+    box-shadow: inset 0 0 0 0 $purp;
+    @include transition(box-shadow 0.1s linear);
+
+    &:hover {
+      @include transition-delay(0.2s);
+      svg line.top {
+        @include translateX(-150px);
+      }
+      svg line.bottom {
+        @include translateX(150px);
+      }
+      svg line.left {
+        @include translateY(100px);
+      }
+      svg line.right {
+        @include translateY(-100px);
+      }
+    }
+
+    p {
+      @include transition(all .2s ease-in-out);
+    }
+
+    svg {
+      line {
+        @include transition(all .2s ease-in-out);
+      }
+      line.top, line.bottom {
+        stroke-dasharray: 150;
+      }
+      line.left, line.right {
+        stroke-dasharray: 50;
+      }
+    }
+  }
+}
+
+@mixin btn-svg5 {
+  .btn5 {
+    @extend .btn;
+    box-shadow: inset 0 0 0 0 $purp;
+    @include transition(box-shadow 0.2s ease-in-out);
+    &:hover {
+      box-shadow: inset 150px 0 0 0 $purp;
+      @include transition-delay(0.3s);
+      svg line.top {
+        @include translateX(-150px);
+      }
+      svg line.bottom {
+        @include translateX(150px);
+      }
+      svg line.left {
+        @include translateY(50px);
+      }
+      svg line.right {
+        @include translateY(-50px);
+      }
+    }
+
+    p {
+      @include transition(all .2s ease-in-out);    
+    }
+
+    svg {
+      line {
+        @include transition(all .2s ease-in-out);
+      }
+      line.top, line.bottom {
+        stroke-dasharray: 150;
+      }
+      line.left, line.right {
+        stroke-dasharray: 50;
+      }
+
+      line.top {
+        @include transition-delay(0.25s);
+      }
+      line.right {
+        @include transition-delay(0.1s);
+      }
+      line.bottom {
+        @include transition-delay(0s);
+      }
+      line.left {
+        @include transition-delay(0.35s);
+      }
+    }
+  }
+}
+
+@mixin btn-svg6 {
+  .btn6 {
+    @extend .btn;
+    @include transition(background 0.4s ease-in);
+    &:hover {
+      @include transition-delay(0s);
+      svg line.top {
+        @include translateX(-150px);
+      }
+      svg line.bottom {
+        @include translateX(150px);
+      }
+      svg line.left {
+        @include translateY(100px);
+      }
+      svg line.right {
+        @include translateY(-100px);
+      }
+    }
+
+    p {
+      @include transition(all 0.2s ease-in-out);
+    }
+
+    svg {
+      line {
+        @include transition(all .2s ease-in-out);
+      }
+
+      line.top, line.bottom {
+        stroke-dasharray: 25 125;
+      }
+      line.left, line.right {
+        stroke-dasharray: 75 25;
+      }
+    }
+  }
+}

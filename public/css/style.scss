@@ -1,0 +1,28 @@
+@import "colorsAndFont","mixins","btns";
+
+body {
+	background-color: $bgColor;
+	text-align: center;
+	width: 90%;
+	a {
+		text-decoration: none;
+	}
+
+	div.btn-wrapper {
+		float: left;
+		h1 {
+			text-align: center;
+			color: $white;
+			margin-bottom: 0;
+		}
+		@include btn-svg1;
+		@include btn-svg2;
+		@include btn-svg3;
+		@include btn-svg4;
+		@include btn-svg5;
+		@include btn-svg6;
+	}
+}
+
+
+
